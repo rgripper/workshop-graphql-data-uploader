@@ -1,0 +1,39 @@
+{
+  "name": "workshop-graphql-data-uploader",
+  "version": "0.0.1",
+  "description": "Demo Graphql backend written in NodeJS",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prod": "npm run build && node dist/index.js",
+    "start": "ts-node -r dotenv/config src/main.ts",
+    "test": "jest src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgripper/workshop-graphql-data-uploader.git"
+  },
+  "author": "Vladimir <azuresplash@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rgripper/workshop-graphql-data-uploader/issues"
+  },
+  "homepage": "https://github.com/rgripper/workshop-graphql-data-uploader#readme",
+  "dependencies": {
+    "firebase": "^5.9.3",
+    "mock-cloud-firestore": "^0.9.2",
+    "ora": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.6",
+    "@types/ora": "^3.2.0",
+    "dotenv": "^7.0.0",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "^3.4.4"
+  }
+}
