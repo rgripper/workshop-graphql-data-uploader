@@ -4,8 +4,8 @@
   "description": "Demo Graphql backend written in NodeJS",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "prod": "npm run build && node dist/index.js",
+    "dist": "tsc -p tsconfig.dist.json",
+    "prod": "npm run dist && node dist/index.js",
     "start": "ts-node -r dotenv/config src/main.ts",
     "test": "jest src"
   },

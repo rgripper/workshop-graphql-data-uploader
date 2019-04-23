@@ -1,8 +1,4 @@
-import { DbConfig } from './dbConfig';
 import { createMovieService } from './movieService';
-import { readFileSync } from 'fs';
-import { createDbClient } from './dbClient';
-import { resolve } from 'path';
 
 import MockFirebase from 'mock-cloud-firestore';
 import { logAction } from './logAction';
