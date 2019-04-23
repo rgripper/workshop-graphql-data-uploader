@@ -13,8 +13,8 @@ export function createMovieService (dbClient: firestore.Firestore) {
     },
 
     async upload({ movies, keywords }: { movies: { id: string }[], keywords: { id: string }[] }) {
-      movies.forEach(x => moviesRef.add(x));
-      keywords.forEach(x => keywordsRef.add(x));
+      movies.forEach(x => moviesRef.doc(x.id).set(x));
+      keywords.forEach(x => keywordsRef.doc(x.id).set(x));
     },
 
     async clear() {
