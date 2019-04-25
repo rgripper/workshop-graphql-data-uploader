@@ -1,7 +1,7 @@
-import { useMockDb } from "../src";
+import { useMockDB } from "../src";
 
-test("useMockDb should upload data to a mocked firestore", async () => {
-  const dbClient = await useMockDb();
+test("useMockDB should upload data to a mocked firestore", async () => {
+  const dbClient = await useMockDB();
   const moviesRef = dbClient.collection('movies');
   expect((await moviesRef.get()).empty).toBe(false);
 })

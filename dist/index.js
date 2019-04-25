@@ -14,7 +14,7 @@ const movieService_1 = require("./movieService");
 const mock_cloud_firestore_1 = __importDefault(require("mock-cloud-firestore"));
 const logAction_1 = require("./logAction");
 const data = __importStar(require("./movies.json"));
-async function useMockDb() {
+async function useMockDB() {
     const dbClient = new mock_cloud_firestore_1.default().firestore();
     const movieService = movieService_1.createMovieService(dbClient);
     if (movieService.isEmpty()) {
@@ -22,7 +22,7 @@ async function useMockDb() {
     }
     return dbClient;
 }
-exports.useMockDb = useMockDb;
+exports.useMockDB = useMockDB;
 async function upload(dbClient) {
     const movieService = movieService_1.createMovieService(dbClient);
     if (movieService.isEmpty()) {

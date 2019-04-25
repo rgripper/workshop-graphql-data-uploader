@@ -4,7 +4,7 @@ import MockFirebase from 'mock-cloud-firestore';
 import { logAction } from './logAction';
 import * as data from './movies.json';
 
-export async function useMockDb (): Promise<firebase.firestore.Firestore> {
+export async function useMockDB (): Promise<firebase.firestore.Firestore> {
   const dbClient = new MockFirebase().firestore();
   const movieService = createMovieService(dbClient);
   if (movieService.isEmpty()) {
